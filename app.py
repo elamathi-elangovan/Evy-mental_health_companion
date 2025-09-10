@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # ===== Load Model & Tokenizer =====
 # Load and save as SavedModel (more compatible)
-model = tf.keras.models.load_model("models/emotion_model_v3.keras")
+model = tf.keras.models.load_model("models/emotion_model_v3.keras",compile=False)
 
 
 
@@ -39,7 +39,7 @@ def generate_supportive_reply(user_message, emotion, conversation_history=None):
                 history_context += f"{msg['role']}: {msg['content']}\n"
         
         response = client.chat.completions.create(
-            model="llama-3.1-8b-instant",  # or "mixtral-8x7b-32768"
+            model="llama-3.1-8b-instruct",  # or "mixtral-8x7b-32768"
             messages=[
                 {"role": "system",
                     "content": (
