@@ -1,0 +1,79 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Tranquil Space</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="wave"></div>
+
+    <h1>Your Tranquil Space </h1>
+    <h2>Moments of Quiet, Mindfully</h2>
+    <p>Your safe place for mental health awareness & support</p>
+    <div class="leaf"></div>
+    
+  </header>
+ <!-- Info Slider Section -->
+<section class="info-slider">
+  <h2>Mental Health Tips 💙</h2>
+  <div class="slider-wrapper">
+    <div class="slider-track">
+      <div class="card">
+        <h3>Stay Active</h3>
+        <p>Even short walks can help lift your mood and reduce stress."</p>
+      </div>
+      <div class="card">
+        <h3>Take Breaks</h3>
+        <p>Give yourself time to relax. Short mindfulness exercises help a lot.</p>
+      </div>
+      <div class="card">
+        <h3>Connect</h3>
+        <p>Talk to friends or family. Sharing your feelings reduces mental load.</p>
+      </div>
+      <div class="card">
+        <h3>Breathe</h3>
+        <p>Deep breathing exercises calm your mind and reduce anxiety.</p>
+      </div>
+      <div class="card">
+        <h3>Sleep Well</h3>
+        <p>A good night’s sleep restores your energy and improves mental clarity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section>
+    <h2>About OUR Mental Health 🫂 </h2>
+    <p>
+      Mental health is the foundation of a fulfilling life. Nurturing your mind helps you stay balanced, resilient, and connected to yourself and others. Everyone faces challenges, and it’s okay to ask for help. Taking small steps—like practicing self-care, sharing your feelings, or seeking guidance—can make a big difference.</p>
+
+<p>This space is created to raise awareness, provide helpful resources, and offer a supportive companion as you navigate your mental health journey. Remember, your feelings are valid, healing is possible, and you are never alone on this path. Together, we can break stigma, foster understanding, and build a community that cares.
+    </p>
+  </section>
+
+  <!-- Chat Section -->
+  <section class="chat-wrapper">
+    <div id="chat-container">
+      <div id="chat-box">
+        <div class="message bot-message">
+          Hi! I’m EVY👋
+          <p>I'm here to listen and support you. How are you feeling today?</p>
+        </div>
+      </div>
+      <div id="input-area">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-btn">Send</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
