@@ -9,7 +9,8 @@ app = Flask(__name__)
 
 # ===== Load Model & Tokenizer =====
 # Load and save as SavedModel (more compatible)
-model = tf.keras.models.load_model("models/emotion_model.h5")
+model = tf.keras.models.load_model("models/emotion_model.keras")
+
 
 
 with open("models/tokenizer.pkl", "rb") as f:
