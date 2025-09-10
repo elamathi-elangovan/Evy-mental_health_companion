@@ -8,7 +8,9 @@ from groq import Groq
 app = Flask(__name__)
 
 # ===== Load Model & Tokenizer =====
+# Load and save as SavedModel (more compatible)
 model = tf.keras.models.load_model("models/emotion_model.h5")
+
 
 with open("models/tokenizer.pkl", "rb") as f:
     tokenizer = pickle.load(f)
@@ -132,4 +134,6 @@ def predict():
 
 # ===== Run Server =====
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Render will set PORT
+    app.run(host="0.0.0.0", port=port, debug=False)
+
