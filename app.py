@@ -24,7 +24,7 @@ max_len = 50  # use same as training
 # ===== Groq API Setup =====
 # safer way: set your key in environment variables first
 # in PowerShell: setx GROQ_API_KEY "gsk_your_real_key_here"
-client = Groq(api_key=os.environ("GROQ_API_KEY"))
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 def generate_supportive_reply(user_message, emotion, conversation_history=None):
     """Generate more nuanced and context-aware empathetic replies."""
